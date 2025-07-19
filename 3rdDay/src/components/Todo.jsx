@@ -17,7 +17,11 @@ const Todo = () => {
 //delete todo
   const deleteTodo=(index)=>{
     setTodos(todos.filter((_, idx) => idx !== index));
-   
+  }
+
+  const editTodo=()=>{
+    
+
   }
 
 
