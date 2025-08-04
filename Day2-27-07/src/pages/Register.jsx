@@ -102,7 +102,7 @@ const Register = () => {
           <div key={idx}>
             <h2>Name: {user.name}</h2>
             <h2>Email: {user.email}</h2>
-            <h2>Password: {user.password}</h2>
+            <h2>Password : {user.password}</h2>
 
           </div>
         ))
