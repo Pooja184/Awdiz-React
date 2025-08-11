@@ -5,6 +5,7 @@ import Todo from './components/Todo'
 import FakeStore from './pages/FakeStore'
 import SingleProduct from './pages/SingleProduct'
 import AllProducts from './pages/AllProducts'
+import UseMemo from './10aug/UseMemo'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/fakestore' element={<FakeStore/>}/>
         <Route path='/product/:productId' element={<SingleProduct/>}/>
         <Route path='/allproducts' element={<AllProducts/>}/>
+        <Route path='/usememo' element={<UseMemo/>}/>
 
       </Routes>
     </>

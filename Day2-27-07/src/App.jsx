@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import NotFound from './pages/NotFound'
+import FakeStore from './pages/FakeStore'
 const App = () => {
   return (
     <>
@@ -15,6 +16,8 @@ const App = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/fakestrore' element={<FakeStore/>}/>
+
       <Route path='*' element={<NotFound/>}/>
      </Routes>
     </>
