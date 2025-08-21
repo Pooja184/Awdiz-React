@@ -7,6 +7,7 @@ import SingleProduct from './pages/SingleProduct'
 import AllProducts from './pages/AllProducts'
 import UseMemo from './10aug/UseMemo'
 import UseReducer from './13aug/UseReducer'
+import Reducer from './20aug/Reducer'
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
         <Route path='/allproducts' element={<AllProducts/>}/>
         <Route path='/usememo' element={<UseMemo/>}/>
         <Route path='/usereducer' element={<UseReducer/>}/>
+        <Route path='/reducer' element={<Reducer/>}/>
+
 
       </Routes>
     </>
