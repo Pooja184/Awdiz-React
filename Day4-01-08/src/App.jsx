@@ -10,6 +10,7 @@ import UseReducer from './13aug/UseReducer'
 import Reducer from './20aug/Reducer'
 import Theme from './22aug/Theme'
 import AddToCart from './23aug/AddToCart'
+import Calculator from './23aug/Calculator'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/reducer' element={<Reducer/>}/>
         <Route path='/theme' element={<Theme/>}/>
         <Route path='/addtocart' element={<AddToCart/>}/>
+        <Route path='/calculator' element={<Calculator/>}/>
 
 
       </Routes>
