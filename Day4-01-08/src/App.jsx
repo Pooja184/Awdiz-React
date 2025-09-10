@@ -11,7 +11,7 @@ import Reducer from './20aug/Reducer'
 import Theme from './22aug/Theme'
 import AddToCart from './23aug/AddToCart'
 import Calculator from './23aug/Calculator'
-
+import Register from './30aug/Register'
 function App() {
 
   return (
@@ -27,6 +27,7 @@ function App() {
         <Route path='/theme' element={<Theme/>}/>
         <Route path='/addtocart' element={<AddToCart/>}/>
         <Route path='/calculator' element={<Calculator/>}/>
+        <Route path='/register' element={<Register/>}/>
 
 
       </Routes>
