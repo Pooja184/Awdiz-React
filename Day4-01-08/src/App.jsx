@@ -12,6 +12,7 @@ import Theme from './22aug/Theme'
 import AddToCart from './23aug/AddToCart'
 import Calculator from './23aug/Calculator'
 import Register from './30aug/Register'
+import Login from './30aug/Login'
 function App() {
 
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/addtocart' element={<AddToCart/>}/>
         <Route path='/calculator' element={<Calculator/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/login' element={<Login/>}/>
 
 
       </Routes>
