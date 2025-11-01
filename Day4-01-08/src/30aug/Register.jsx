@@ -8,7 +8,7 @@ const Register = () => {
     email:"",
     password:""
   })
-  const [formData,setFormData]=useState([])
+  // const [formData,setFormData]=useState([])
   const handleChange=(e)=>{
     // console.log({[e.target.name]:e.target.value})
     setUserInfo({...userInfo,[e.target.name]:e.target.value})
@@ -37,8 +37,7 @@ const Register = () => {
      })
    } catch (error) {
         if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
+         
           alert(error.response.data.message || "Registration failed. Please try again.");
           console.log("Error data:", error.response.data);
         } 

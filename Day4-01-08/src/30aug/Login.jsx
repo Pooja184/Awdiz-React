@@ -31,8 +31,7 @@ const Login = () => {
          userInfo,
        );
        console.log("login response:", response.data);
-       // dispatch the user into redux using the action creator
-       // response.data may contain the user object or a message/token depending on your backend
+
        dispatch(userLogin(response.data));
        console.log("dispatched user to store");
        if (response.data) {
@@ -45,8 +44,7 @@ const Login = () => {
      })
    } catch (error) {
         if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
+        
           alert(error.response.data.message || "Registration failed. Please try again.");
           console.log("Error data:", error.response.data);
         } 
