@@ -7,8 +7,12 @@ const calculatorSlice=createSlice({
         secondValue:0,
         operator:"+",
         result:0,
+        user:null
     },
     reducers:{
+        userLogin:(state,action)=>{
+            state.user=action.payload;
+        },
         setFirstValue:(state,action)=>{
             state.firstValue=action.payload;
         },
@@ -41,5 +45,5 @@ const calculatorSlice=createSlice({
     }
 })
 
-export const {setFirstValue,setSecondValue,setOperator,calculate,clear} =calculatorSlice.actions;
+export const {setFirstValue,setSecondValue,setOperator,calculate,clear,userLogin} =calculatorSlice.actions;
 export default calculatorSlice.reducer;
