@@ -24,8 +24,8 @@ const UserForm = () => {
     })
   }
   return (
-    <div className="h-screen flex justify-center items-center">
-      <form onSubmit={handleSubmit} className="h-1/2 w-80 sm:w-1/3 bg-yellow-200 p-3">
+    <div className="h-screen flex justify-center items-center bg-black">
+      <form onSubmit={handleSubmit} className="h-1/2 w-80 sm:w-1/3 bg-white p-3">
         <h2 className="text-center font-bold text-yellow-600">Login</h2>
         <div className="flex flex-col justify-center pt-4 px-14 gap-2">
           <label htmlFor="name">Name</label>
@@ -60,7 +60,7 @@ const UserForm = () => {
           />
           {/* <input type="submit" value='Submit' className='bg-slate-400 mt-2 p-2 cursor-pointer' />
            */}
-          <button type="submit" className="bg-slate-400 mt-2 p-2 cursor-pointer">
+          <button type="submit" className="bg-gray-800 mt-2 p-2 cursor-pointer text-white">
             Submit
           </button>
         </div>
