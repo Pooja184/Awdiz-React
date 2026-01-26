@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import UserForm from './components/UserForm'
 import Todo1 from './components/Todo1'
+import Todo from './components/Todo'
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
         <Route path='/' element={<Todo1/>}/>
         <Route path='/form' element={<UserForm/>}/>
         <Route path='/nav' element={<Navbar/>}/>
-        {/* <Route path='/todo' element={<Todo/>}/> */}
+        <Route path='/todo' element={<Todo/>}/>
       </Routes>
     </>
   )

@@ -1,36 +1,48 @@
 import React, { useState } from 'react'
 
 const Todo = () => {
-  const [todos,setTodos]= useState(['code','sleep'])
-  const [newTodos,setNewTodos]=useState("")
+  const [todos,setTodos]= useState([]);
+  const [task,setTask]=useState("");
+  const [editId,setEditId]=useState(null);
 
-  const handleChange=(e)=>{
-    //  console.log(e.target.value)
-    setNewTodos(e.target.value);
+  const handleAddAndUpdate=(e)=>{
+    if (!task.trim())  return
+
+    if (editId) {
+      setTodos(todos.map((todo)=>(
+        todo.id===editId?{...todo,text:task}:todo
+      )))
+      setEditId(null)
+    }else{
+      setTodos([...todos,{id:Date.now(),text:task}])
+    }
+    setTask("")
   }
 
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    setTodos([...todos,newTodos])
-    setNewTodos("")
+  const handleEdit=(todo)=>{
+      setTask(todo.text)
+      setEditId(todo.id)
 
   }
 
+  const handleDelete=(idx)=>{
+    setTodos(todos.filter((todo)=>todo.id !== idx))
+  }
 
   return (
     <div>
       <input
       type='text'
-      onChange={handleChange}
-      value={newTodos}
+      onChange={(e)=>setTask(e.target.value)}
+      value={task}
       />
-      <button onClick={handleSubmit}>Add todo</button>
+      <button onClick={handleAddAndUpdate}>{editId?"update":"Add"}</button>
       <h1>todos:</h1>
       {
         todos.map((todo)=>
-          <h2 key={todo}>
-            {todo}
-          </h2>
+       <div key={todo.id}>
+        <p>{todo.text} <button onClick={()=>handleEdit(todo)}>Edit</button><button onClick={()=>handleDelete(todo.id)}>Delete</button></p>
+       </div>
         )
       }
     </div>
